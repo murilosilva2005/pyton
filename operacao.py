@@ -82,3 +82,42 @@ class Operacao:
         resultado = ""
         for i in range(0, 11, 1):
             resultado += f' \n{num1} * {i} = {num1 * i}'
+
+
+     def exercicio8(self, num):
+        if num < 0:
+            return "O número é negativo."
+        else:
+        for i in range(1, num + 1):
+                print(i)
+            return "O número é positivo."
+
+
+     def exercicio10(self, num):
+        if num < 0:
+            return "O número é negativo."
+        else:
+            if (num):
+                return f"{num} é um número primo."
+            else:
+                return f"{num} não é um número primo."
+
+
+    def exercicio11(self):
+    if num < 2:
+        return False
+    for i in range(2, int(num ** 0.5) + 1):
+        if num % i == 0:
+            return False
+    return True
+
+
+
+    def exercicio12(self):
+        if self.numero == 0 or self.numero == 1:
+            return 1
+        else:
+            resultado = 1
+            for i in range(2, self.numero + 1):
+                resultado *= i
+            return resultado
