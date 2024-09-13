@@ -83,41 +83,50 @@ class Operacao:
         for i in range(0, 11, 1):
             resultado += f' \n{num1} * {i} = {num1 * i}'
 
-
-     def exercicio8(self, num):
+    def exercicio8(self, num):
         if num < 0:
             return "O número é negativo."
         else:
-        for i in range(1, num + 1):
+            for i in range(1, num + 1):
                 print(i)
-            return "O número é positivo."
+        return "O número é positivo."
+
+    def exercicio9(self, num):
+        soma = 0
+        for i in range(1, num, 1):
+            soma += i
+        return soma
+
+    def exercicio10(self, num):
+        primo = "1\n2\n3\n5"
+        for i in range(5, 21, 1):
+            if i % 2 != 0 and i % 3 != 0 and i % 5 != 0:
+                primo += f'\n{i}'
+            return primo
 
 
-     def exercicio10(self, num):
-        if num < 0:
-            return "O número é negativo."
-        else:
-            if (num):
-                return f"{num} é um número primo."
-            else:
-                return f"{num} não é um número primo."
+    def exercicio11(self, num):
+        if num == 2 or num == 3 or num == 5:
+           return f'0 {num} é primo!'
+        elif num % 2 != 0 and num % 3 != 0 and num % 5 != 0:
+            return f'0 {num} Não é primo!'
 
 
-    def exercicio11(self):
-    if num < 2:
-        return False
-    for i in range(2, int(num ** 0.5) + 1):
-        if num % i == 0:
-            return False
-    return True
+    def exercicio12(self, num):
+            res = 1
+            for num in range(1, num , 1):
+                res += res * num
+            return res
 
+    def exercicio13(self, num):
+        fib1 = 0
+        fib2 = 1
+        for i in range(1, num):
+            fib3 = fib1 + fib2
+            fib1 = fib2
+            fib2 = fib3
+            print(fib3)
+        return fib3
 
+    def exercicio14(self, num):
 
-    def exercicio12(self):
-        if self.numero == 0 or self.numero == 1:
-            return 1
-        else:
-            resultado = 1
-            for i in range(2, self.numero + 1):
-                resultado *= i
-            return resultado
